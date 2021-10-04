@@ -1,0 +1,27 @@
+.main-container {
+  background-color: #f3f3f3;
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: 140px;
+}
+
+.card {
+  padding: 30px;
+  margin: 20px; 
+  background: cadetblue;
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
