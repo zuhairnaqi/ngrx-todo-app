@@ -6,6 +6,7 @@
 
   <div *ngIf="todoItems$ | async"  class="card-container">
     <div *ngFor="let task of todoItems$ | async" class="card">
+      <span class="card__delete-icon" (click)="deleteTask(task)">x</span>
       <p class="card__title">
         {{task.title}}
       </p>

@@ -16,10 +16,10 @@ const reducer = createReducer(
     ...state,
     todoTasks: [...state.todoTasks, task],
   })),
-  // on(deleteTask, (state) => ({
-  //   ...state,
-  //   todoTasks: [...state.todoTasks],
-  // })),
+  on(deleteTask, (state, task: TodoTask) => ({
+    ...state,
+    todoTasks: state.todoTasks.filter(todo => todo.id !== task.id),
+  })),
 );
 
 export function appReducer(state: AppState = initialState, action: Action) {
